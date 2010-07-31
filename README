@@ -1,5 +1,0 @@
-To compile go into the 'protoype' directory & execute the following command:
-'scalac -d classes src/com/swipe/*.scala'
-
-To execute go into the 'prototype' directory & execute the following command:
-'scala -classpath classes com.swipe.Swipe'
