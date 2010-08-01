@@ -1,0 +1,5 @@
+Setup:
+    - Java 1.6.0 update 14+
+    - Install Eclipse "Classic" 3.5
+    - Install m2eclipse - http://m2eclipse.sonatype.org/installing-m2eclipse.html
+    - Install ScalaIDE - http://www.assembla.com/wiki/show/scala-ide/Requirements_and_Installation
