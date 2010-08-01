@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 public class Test {
 	
 	private static Logger log = LoggerFactory.getLogger(Test.class);
-	private Swipe swipe;
 	
 	public static void main(String[] args) {
 		log.debug("Java: Swipe");
