@@ -1,12 +1,12 @@
 package com.swipe.server;
 
-public class JavaTest {
+public class Boot {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		ScalaTest.say();
+		Swipe.start();
 	}
 
 }
