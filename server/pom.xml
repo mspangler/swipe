@@ -3,7 +3,7 @@
   	<groupId>com.swipe</groupId>
   	<artifactId>server</artifactId>
   	<packaging>war</packaging>
-  	<name>Swipe</name>
+  	<name>Swipe Server</name>
   	<version>0.0.1</version>
   	<inceptionYear>2010</inceptionYear>
 
