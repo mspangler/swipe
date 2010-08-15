@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   	<modelVersion>4.0.0</modelVersion>
   	<groupId>com.swipe</groupId>
-  	<artifactId>server</artifactId>
+  	<artifactId>swipe-server</artifactId>
   	<packaging>war</packaging>
   	<name>Swipe Server</name>
   	<version>0.0.1</version>
@@ -19,7 +19,11 @@
       		<name>Scala-Tools Maven2 Repository</name>
       		<url>http://scala-tools.org/repo-releases</url>
     	</repository>
-  	</repositories>
+    	<repository>
+      		<id>jboss</id>
+      		<url>http://repository.jboss.org/maven2</url>
+   		</repository>
+  	</repositories>  	
 
   	<pluginRepositories>
     	<pluginRepository>
@@ -42,9 +46,99 @@
       		<version>4.8.1</version>
       		<scope>test</scope>
     	</dependency>
+    	<dependency>
+      		<groupId>org.jboss.resteasy</groupId>
+      		<artifactId>resteasy-jaxrs</artifactId>
+      		<version>1.2.GA</version>
+    	</dependency>
+    	<dependency>
+      		<groupId>org.jboss.resteasy</groupId>
+      		<artifactId>resteasy-spring</artifactId>
+      		<version>1.2.RC1</version>
+   		</dependency>    	
+    	<dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-jdbc</artifactId>
+    		<version>3.0.3.RELEASE</version>
+    		<type>jar</type>
+    		<scope>compile</scope>
+    	</dependency>
+    	<dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-webmvc</artifactId>
+    		<version>3.0.3.RELEASE</version>
+    		<type>jar</type>
+    		<scope>compile</scope>
+    	</dependency>
+    	<dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-test</artifactId>
+    		<version>3.0.3.RELEASE</version>
+    		<type>jar</type>
+    		<scope>test</scope>
+    	</dependency>
+    	<dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-context-support</artifactId>
+    		<version>3.0.3.RELEASE</version>
+    		<type>jar</type>
+    		<scope>compile</scope>
+    	</dependency>
+    	<dependency>
+    		<groupId>javax.servlet</groupId>
+    		<artifactId>servlet-api</artifactId>
+    		<version>2.5</version>
+    		<type>jar</type>
+    		<scope>provided</scope>
+    	</dependency>
+    	<dependency>
+    		<groupId>log4j</groupId>
+    		<artifactId>log4j</artifactId>
+    		<version>1.2.15</version>
+    		<type>jar</type>
+    		<scope>provided</scope>
+    		<exclusions>
+    			<exclusion>
+    				<artifactId>jms</artifactId>
+    				<groupId>javax.jms</groupId>
+    			</exclusion>
+    			<exclusion>
+    				<artifactId>jmxtools</artifactId>
+    				<groupId>com.sun.jdmk</groupId>
+    			</exclusion>
+    			<exclusion>
+    				<artifactId>jmxri</artifactId>
+    				<groupId>com.sun.jmx</groupId>
+    			</exclusion>
+    		</exclusions>
+    	</dependency>
+    	<dependency>
+    		<groupId>mysql</groupId>
+    		<artifactId>mysql-connector-java</artifactId>
+    		<version>5.1.13</version>
+    		<type>jar</type>
+    		<scope>provided</scope>
+    	</dependency>
+    	<dependency>
+    		<groupId>org.jboss.resteasy</groupId>
+    		<artifactId>resteasy-jaxb-provider</artifactId>
+    		<version>1.2.GA</version>
+    		<scope>compile</scope>
+    		<exclusions>
+    			<exclusion>
+    				<artifactId>jaxb-api</artifactId>
+    				<groupId>javax.xml.bind</groupId>
+    			</exclusion>
+    			<exclusion>
+    				<artifactId>jaxb-impl</artifactId>
+    				<groupId>com.sun.xml.bind</groupId>
+    			</exclusion>
+    		</exclusions>
+    	</dependency>
   	</dependencies>
 
   	<build>
+  		<finalName>swipe-server</finalName>
     	<plugins>
 	      	<plugin>
 	        	<groupId>org.scala-tools</groupId>
