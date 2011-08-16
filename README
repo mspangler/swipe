@@ -1,4 +1,4 @@
-Setup:
+Setup: hi
     - Java 1.6.0 update 14+
     - Install Eclipse "Classic" 3.5.2 - http://download.eclipse.org/eclipse/downloads/drops/R-3.5.2-201002111343/index.php
     - Install ScalaIDE - http://www.assembla.com/wiki/show/scala-ide/Requirements_and_Installation
